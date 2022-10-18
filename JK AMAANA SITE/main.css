@@ -1,0 +1,563 @@
+html{
+     scroll-behavior: smooth;
+}
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;400;500&display=swap');
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+body{
+     font-family: 'Overpass', sans-serif;
+}
+/* TOPPEST........AND...........NAV */
+.toppest{
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     background-color: black;
+     color: #fff;
+}
+.top{
+     margin: 10px;
+     display: flex;
+     align-items: center;
+     text-align: center;
+}
+ .top i{
+     margin-right: 4px;
+     padding: 10px;
+     font-size: 2rem;
+     color: #ffd000;
+     cursor: pointer;
+     transition: .4s;
+}
+.top i:hover{
+     color: #5f4e00;
+}
+.toppest h3{
+     font-size: .8rem;
+}
+.toppest a{
+     font-size: .8rem;
+     color: #5e5e5e;
+     text-decoration: none;
+}
+.toppest p{
+     font-size: .6rem;
+     color: #5e5e5e;
+} 
+/* OTHER NAV */
+.other-nav{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #fff;
+     z-index: 1;
+}
+.other-nav img{
+     width: 220px;
+     margin-left: 10px;
+}
+.btns{
+     margin-right: 10px;
+}
+.fa-bars{
+     padding: 5px;
+     font-size: 2rem;
+     cursor: pointer;
+}
+.fa-xmark{
+     padding: 5px;
+     font-size: 2rem;
+     cursor: pointer;
+     display: none;
+}
+
+.dropdown{
+     position: absolute;
+     z-index: 4;
+     right: 0;
+     display: none;
+     text-align: center;
+     background-color: #000;
+     opacity: .8;
+}
+.dropdown ul{
+     list-style: none;
+}
+.dropdown a{
+     color: #fff;
+     display: block;
+     text-decoration: none;
+     margin: 5px;
+     padding: 10px 100px;
+     transition: .2s;
+}
+.dropdown a:hover{
+     background-color: #fff;
+     color: #000000;
+}
+
+/* ENDING...................................................... */
+/* LANDING ................ */
+.landing{
+     position: relative;
+     width: 100%;
+     height: 100vh;
+     background-image: url(./Images/excavator\ slider.jpg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+}
+.overlay{
+     width: 100%;
+     height: 100vh;
+     background-color: rgba(168, 6, 6, 0);
+     position: absolute;
+     top: 0;
+}
+.text{
+     margin-top: 200px ;
+     margin-left: 90px;
+     color: #fff;
+     font-size: 2.5rem;
+     width: 80%;
+     transition: .4s;
+}
+.text button{
+     padding: 10px;
+     border: none;
+     font-size: 1rem;
+     background-color: #000;
+     color: #fff;
+     border-radius: 5px;   
+     transition: .4s; 
+     cursor: pointer;
+}
+.text button:hover{
+     background-color: #fff;
+     color: #000;
+}
+
+.attrib{
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     margin-top: 20px;
+}
+.attrib i{
+     font-size: 1.5rem;
+     margin-bottom: 10px;
+     color: #000;
+}
+.why{
+     padding: 30px 10px;
+     background-color: #ccc;
+     margin: 10px;
+     transition: .4s;
+     animation: roll 15s infinite;
+}
+.why:hover{
+     background-color: #fff;
+}
+.why h4{
+     font-size: 1rem;
+     font-weight: 600;
+     color: #5f4e00;
+}
+.describe{
+     font-size: 1rem;
+     font-weight: 400;
+     margin: 10px 0;
+}
+
+#title1 p{
+     font-size: 1.5rem;
+}
+.inner-about{
+     text-align: center;
+}
+.about img{
+     width: 70%;
+}
+
+.about2{
+     width: 100%;
+     margin: 0 auto;
+     padding: 0px 20px 20px 20px;
+}
+.inner-about p{
+     font-size: 1.1rem;
+     font-weight: 400;
+}
+
+.services{
+     text-align: center;
+     margin-top: 50px;
+}
+.services a{
+     color: #000;
+     text-decoration: none;
+}
+#title2 p{
+     font-size: 1.5rem;
+}
+.inner-services{
+     display: grid;
+     grid-template-columns: repeat(3,2fr);
+}
+.inner-services i{
+     font-size: 2rem;
+     color: #ffd000;
+}
+.ser{
+     margin: 20px;
+     padding: 40px;
+     background-color: #5f4e00;
+     height: 250px;
+     border-radius: 5px;
+     transition: .4s;
+}
+.ser:hover{
+     background-color: #312903;
+     color: #fff;
+}
+.ser h4{
+     margin: 10px 0;
+     color: #fff;
+}
+.projects{
+     margin: 50px 50px;
+     text-align: center;
+}
+#title3 p{
+     font-size: 1.5rem;
+}
+#slider{
+     overflow: hidden;
+}
+#slider figure{
+     display: flex;
+     position: relative;
+     height: 90vh;
+     width: 500%;
+     margin: 0;
+     left: 0;
+     animation: 20s go infinite;
+}
+#slider figure img{
+     width: 20%;
+     height: 90vh;
+     float: left;
+}
+@keyframes go {
+     0%{
+          left: 0;
+     }
+     20%{
+          left: 0;
+     }
+     25%{
+          left: -100%;
+     }
+     45%{
+          left: -100%;
+     }
+     50%{
+          left: -200%;
+     }
+     70%{
+          left:-200%;
+     }
+     75%{
+          left: -300%;
+     }
+     95%{
+          left: -300%;
+     }
+     100%{
+          left: -400%;
+     }
+}
+.view-btn{
+     margin: 10px auto;
+     display: block;
+     text-align: center;
+     text-decoration: none;
+     color: black;
+     font-size: 1.1rem;
+     font-weight: 500;
+}
+
+footer{
+     text-align: center;
+     background-color: #fff;
+}
+footer img{
+     width: 50%;
+}
+.conts{
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+}
+.cont1,
+.cont2,
+.cont3{
+     margin: 20px;
+}
+.conts i{
+     font-size: 2rem;
+     margin-top: 10px;
+     color: #ffd000;
+}
+.conts p{
+     font-size: 1.2rem;
+     font-weight: 500;
+}
+.down-links{
+     margin: 0 auto;
+     width: 50%;
+     text-align: center;
+}
+.down-links ul{
+     text-align: center;
+     margin-bottom: 10px;
+     list-style: none;
+     display: inline-block;
+}
+.down-links a{
+     display: inline-block;
+     margin-top:5px;
+     padding: 5px;
+     text-decoration: none;
+     color: #000;
+}
+
+.cul{
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     margin: 10px;
+     text-align: center;
+     gap: 20px;
+}
+.cul img{
+     width: 100%;
+     height: 220px;
+}
+
+.copyright{
+     text-align: center;
+     background-color: #5f4e00;
+     color: #eeeded;
+}
+.copyright div{
+     padding: 7px;
+}
+.work{
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+}
+.work1{
+     text-align: center;
+     margin: 10px;
+}
+.work1 img{
+     width: 100%;
+     height: 300px;
+     border-radius: 10px;
+}
+
+/* .contact{
+     border: 6px solid ;
+} */
+.back{
+     background-image: url(./Images/pexels-anamul-rezwan-1216589.jpg);
+     height: 60vh;
+     width: 100%;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+.sailler{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     gap: 20px;
+     background-color: #ccc;
+}
+.form h3{
+     margin: 7px 0 0 7px;
+     color: #fff;
+}
+.form-element{
+     display: flex;
+     flex-direction: column;
+}
+.form-element input{
+     padding: 12px;
+     outline: none;
+     margin:  7px;
+     border: none;
+     background-color: white;
+     transition: .4s;
+}
+.form-element textarea{
+     margin: 7px;
+     border: none;
+     outline: none;
+     padding: 5px;
+}
+.form-element button{
+     margin: 5px auto;
+     cursor: pointer;
+     padding: 10px;
+     width: 40%;
+     background-color: #000 ;
+     color: #fff;
+     border: none;
+     transition: .4s;
+}
+.form-element button:hover{
+     background-color: #fff ;
+     color: #000;
+
+}
+/* LAPTOP MEDIA..................................... */
+@media screen and (max-width:930px) {
+     .sailler{
+          grid-template-columns: repeat(1,2fr);
+          gap: 10px;
+          text-align: center;
+     }
+     .map{
+          width: 100%;
+          margin-top: 10px;
+     }
+}
+
+
+/* TABLET MEDIA..................................... */
+@media screen and (max-width:768px) {
+     .toppest{
+          display: grid;
+          grid-template-columns: repeat(1,3fr);
+     }
+     .top{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+     }
+     .text{
+          margin-top: 200px ;
+          margin-left: 70px;
+          font-size: 1.9rem;
+          width: 80%;
+          
+     }
+     .landing{
+          border-bottom-left-radius: 140px;
+     }
+     .attrib{
+          grid-template-columns: repeat(2,3fr);
+     }
+     .inner-services{
+          display: grid;
+          grid-template-columns: repeat(2,3fr);
+     }
+     .conts{
+          grid-template-columns: repeat(1,3fr);
+     }
+     .work{
+          display: grid;
+          grid-template-columns: repeat(1,3fr);
+     }
+}
+/* PHONE MEDIA..................................... */
+@media screen and (max-width:610px) {
+     iframe{
+          width: 100%;
+     }
+}
+@media screen and (max-width:600px) {
+     .toppest{
+          display: grid;
+          grid-template-columns: repeat(1,3fr);
+     }
+     .top{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+     }
+     .top i{
+          margin-right: 4px;
+          padding: 10px;
+          font-size: 1rem;
+          color: #ffd000;
+          cursor: pointer;
+          transition: .4s;
+     }
+     .toppest h3{
+          font-size: .8rem;
+     }
+     .toppest a{
+          font-size: .8rem;
+          color: #5e5e5e;
+          text-decoration: none;
+     }
+     .toppest p{
+          font-size: .6rem;
+          color: #5e5e5e;
+     } 
+     .text{
+          margin-top: 180px ;
+          margin-left: 70px;
+          font-size: 1.5rem;
+          width: 80%;         
+     }
+
+     .attrib{
+          grid-template-columns: repeat(1,3fr);
+     }
+     .inner-services{
+          display: grid;
+          grid-template-columns: repeat(1,5fr);
+     }
+     .projects{
+          margin: 10px;
+          text-align: center;
+     }
+     #slider figure{
+          height: 40vh;
+     }
+     #slider figure img{
+          height: 40vh;
+     }
+}
+/* OTHER MEDIA..................................... */
+@media screen and (max-width:400px) {
+     .text{
+          margin-top: 150px ;
+          margin-left: 50px;
+          font-size: 1.3rem;
+          width: 80%;         
+     }
+}
+@media screen and (max-width:300px) {
+     .other-nav img{
+          width: 190px;
+          margin-left: 10px;
+     }
+     .fa-bars{
+          padding: 5px;
+          font-size: 1.5rem;
+          cursor: pointer;
+     }
+}
+
+@keyframes roll {
+     from{
+          clip-path: circle(0.8% at 50% 50%);
+     }
+     to{
+          clip-path: circle(81.9% at 37% 51%);
+     }
+}
